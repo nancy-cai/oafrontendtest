@@ -1,0 +1,34 @@
+.location input{    
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.find-agents{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.agent-detail{
+    width: 90%;
+}
+.agent-name{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.agent-contact{
+    width: 35%;
+}
+
+.agent-email{
+    padding-left:30px;
+    width: 35%;
+}
+.agent-phone{
+    width: 30%;
+}
+
+.search-title{
+    margin-top:30px;
+}

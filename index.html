@@ -1,0 +1,32 @@
+<html>
+
+<head>
+     <link href="core.css" rel="stylesheet" type="text/css" />
+      
+
+</head>
+<body>
+    <h2>OpenAgent - Find agents by city</h2>
+    <div class="location">
+        <input type="radio" name="city" value="Sydney" id="sydney" class="city-radio"> Sydney<br>
+        <input type="radio" name="city" value="Melbourne" id="melbourne" class="city-radio"> Melbourne<br>
+        <input type="radio" name="city" value="Brisbane" id="brisbane" class="city-radio">Brisbane
+    </div>
+    <button class="find-agents">Find Agents</button>
+    <h3 class="result-title">Top Agents in <span class="city-name"></span></h4>
+    
+    <div class="agent-result" >
+        
+    </div>
+    <h3 class="search-title">Search agent by name</h4>
+    <div class="search-agent">
+        <input placeholder="Enter agent name"></input>
+        <button class="search-btn">Search agents</button>
+    </div>
+    <div class="search-result"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://indigouat.openagent.com.au/build/v1/js/indi.js"></script>
+    <script src="agent.js"></script>
+</body>
