@@ -42,7 +42,7 @@ $(document).on("click", ".update-agent", function() {
     console.log(agentid+' '+name);
 
     oa.agent.updateAgent(agentid,name);
-  });  
+  });
 
 
   $(document).on("click", ".search-btn", function() {
@@ -51,14 +51,14 @@ $(document).on("click", ".update-agent", function() {
     console.log(name);
 
     $.ajax({
-          url: "http://apidev.openagent.com.au/v1/agentrest/search-by-name/" + name,
+          url: "/search-by-name/" + name,
           type: "get",
-          
+
           dataType: "json"
       }).done(function(results) {
             addAgents(results,'.search-result');
     });
-  }); 
+  });
 
 function addAgents(results,classname){
     for(var i=0;i<20;i++){
@@ -74,10 +74,10 @@ function addAgents(results,classname){
             }else{
                 $(classname).append('<p class="agent-name">'+name+'</p>');
             }
-        
-            
+
+
             $(classname).append('<table class="agent-detail"><tbody><tr><td class="agent-contact">Agency: '+agency+'</td>  <td class="agent-email">Email '+email+'</td> <td class="agent-phone">Phone: '+phone+'</td></tr></tbody></table>');
-                
+
            $(classname).append('<div class="update"><input class="agent-name-box"></input>  <input class="agent-email-box"></input> <input class="agent-phone-box"></input><button class="update-agent">Update</button></div>');
            var agentNames= $(classname+' '+'.agent-name-box');
            agentNames.eq(i).val(name);
@@ -88,10 +88,7 @@ function addAgents(results,classname){
            var agentUpdates=   $(classname+' '+'.update-agent');
            agentUpdates.eq(i).attr('agent-id',agentid);
             //$('.agent-detail').append('<p class="agent-name">'+name+'-Top Seller</p><tr><td class="agent-contact">Agency: '+agency+'</td>  <td class="agent-email">Email '+email+'</td> <td class="agent-phone">Phone: '+phone+'</td></tr>');
-            
+
 
         }
 }
-
-
-
